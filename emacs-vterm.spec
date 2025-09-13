@@ -1,8 +1,13 @@
 %global pkg vterm
 %global forgeurl https://github.com/akermu/emacs-libvterm
 
-Version:
+Version: 056ad74653704bc353d8ec8ab52ac75267b7d373
 %forgemeta
+Name: emacs-vterm
+Release: 1%{?dist}
+Summary: emacs vterm
+URL:	 %{forgeurl}
+Source:  %{forgesource}
 License: GPLv3
 
 BuildArch: x86_64
