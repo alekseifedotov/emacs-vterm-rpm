@@ -22,6 +22,7 @@ Emacs %{pkg} integration
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
 %prep
+exit 1
 %forgesetup
 %cmake
 
@@ -31,11 +32,6 @@ Emacs %{pkg} integration
 
 #-- FILES ---------------------------------------------------------------------#
 %files
-%doc README.md
-%license LICENSE
-%{_bindir}/hellocopr
-%{python3_sitelib}/%{name}-*.egg-info/
-%{python3_sitelib}/%{name}/
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
