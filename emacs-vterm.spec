@@ -18,7 +18,7 @@ Requires:       emacs(bin)%{?_emacs_version: >= %{_emacs_version}}
 Emacs %{pkg} integration
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
-exit 9
+exit 99
 %autosetup -n %{pkg}-%{version}
 
 %build
