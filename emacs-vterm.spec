@@ -7,7 +7,7 @@ Name: emacs-vterm
 Release: 1%{?dist}
 Summary: emacs vterm
 URL:	 %{forgeurl}
-Source:  %{forgesource}
+Source0:  https://github.com/akermu/emacs-libvterm/archive/%{version}.zip
 License: GPLv3
 
 BuildArch: x86_64
