@@ -10,14 +10,16 @@ Source0: https://github.com/akermu/emacs-libvterm/archive/refs/heads/master.zip
 
 BuildArch: x86_64
 
+BuildRequires: cmake
 BuildRequires: libvterm-devel
-BuildRequires:  emacs-nw
-Requires:       emacs(bin)%{?_emacs_version: >= %{_emacs_version}}
+BuildRequires: emacs-nw
+Requires:      emacs(bin)
 
 %description
 Emacs %{pkg} integration
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
+%prep
 exit 99
 %autosetup -n %{pkg}-%{version}
 
