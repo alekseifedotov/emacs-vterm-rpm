@@ -2,13 +2,12 @@
 %global forgeurl https://github.com/akermu/emacs-libvterm
 
 Version: 056ad74653704bc353d8ec8ab52ac75267b7d373
-%global shortcommit %(c=%{version}; echo ${c:0:7})
 %forgemeta
 Name: emacs-vterm
 Release: 1%{?dist}
 Summary: emacs vterm
 URL:	 %{forgeurl}
-Source0:  https://github.com/akermu/emacs-libvterm/%{commit}/%{name}-%{shortcommit}.tar.gz
+Source0:  https://github.com/akermu/emacs-libvterm/archive/%{version}.zip
 License: GPLv3
 
 BuildArch: x86_64
