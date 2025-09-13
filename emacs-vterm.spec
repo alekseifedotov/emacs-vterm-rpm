@@ -1,8 +1,8 @@
-%global srcname copr-tito-quickdoc
+%global pkg vterm
 
-Name: emacs-vterm
+Name: emacs-%{pkg}
 Version: 0.0.1
-Release: 1%{?dist}
+Release: %autorelease
 License: GPLv3
 Summary: A trivial python 3 program for demonstrating RPM packaging
 Url: https://github.com/akermu/emacs-libvterm
@@ -10,16 +10,17 @@ Source0: https://github.com/akermu/emacs-libvterm/archive/refs/heads/master.zip
 
 BuildArch: x86_64
 
-BuildRequires: cmake
 BuildRequires: libvterm-devel
+BuildRequires:  emacs-nw
+Requires:       emacs(bin)%{?_emacs_version: >= %{_emacs_version}}
 
 %description
-Emacs libvterm integration
+Emacs %{pkg} integration
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
-%prep
+exit 9
+%autosetup -n %{pkg}-%{version}
 
-%cmake
 %build
 
 %install
