@@ -24,11 +24,9 @@ Emacs %{pkg} integration
 %prep
 %forgesetup
 %cmake
-exit 1
 
-%build
-
-%install
+%cmake_build
+%cmake_install
 
 #-- FILES ---------------------------------------------------------------------#
 %files
