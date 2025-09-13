@@ -23,8 +23,8 @@ Emacs %{pkg} integration
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
 %prep
 %forgesetup
-exit 1
 %cmake
+exit 1
 
 %build
 
