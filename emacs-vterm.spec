@@ -20,7 +20,7 @@ Emacs %{pkg} integration
 
 #-- PREP, BUILD & INSTALL -----------------------------------------------------#
 %prep
-exit 99
+exit 98
 %autosetup -n %{pkg}-%{version}
 
 %build
