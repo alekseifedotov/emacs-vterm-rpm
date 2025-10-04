@@ -50,6 +50,11 @@ install -pm 755 vterm-module.so %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
 # Install Elisp source file
 install -pm 644 vterm.el %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
 
+# Install shell integration scripts
+mkdir -p %{buildroot}%{_emacs_sitelispdir}/%{pkg}/etc
+install -pm 644 etc/*.sh %{buildroot}%{_emacs_sitelispdir}/%{pkg}/etc/
+install -pm 644 etc/*.fish %{buildroot}%{_emacs_sitelispdir}/%{pkg}/etc/
+
 # Byte-compile Elisp file
 %{_emacs_bytecompile} %{buildroot}%{_emacs_sitelispdir}/%{pkg}/vterm.el
 
