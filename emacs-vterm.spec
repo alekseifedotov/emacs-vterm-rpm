@@ -50,14 +50,8 @@ install -pm 755 vterm-module.so %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
 # Install Elisp source file
 install -pm 644 vterm.el %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
 
-# Byte-compile all Elisp files
-# Must use absolute paths and handle errors
-for el in %{buildroot}%{_emacs_sitelispdir}/%{pkg}/*.el; do
-    %{_emacs_bytecompile} "$el" || {
-        echo "ERROR: Failed to byte-compile $el"
-        exit 1
-    }
-done
+# Byte-compile Elisp file
+%{_emacs_bytecompile} %{buildroot}%{_emacs_sitelispdir}/%{pkg}/vterm.el
 
 #-- FILES ---------------------------------------------------------------------#
 %files
