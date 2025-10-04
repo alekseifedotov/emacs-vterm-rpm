@@ -14,7 +14,8 @@ Source0:        %{url}/archive/%{commit}/emacs-libvterm-%{commit}.tar.gz
 
 BuildRequires:  cmake >= 3.11
 BuildRequires:  gcc
-BuildRequires:  libvterm-devel
+BuildRequires:  make
+BuildRequires:  pkgconfig(vterm) >= 0.1
 BuildRequires:  emacs-nw >= 25.1
 
 # Runtime requirements
