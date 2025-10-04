@@ -1,8 +1,8 @@
 %global pkg vterm
 
 Name:           emacs-%{pkg}
-Version:        0.0.1
-Release:        0%{?dist}
+Version:        1.0.0
+Release:        1%{?dist}
 Summary:        Fully-fledged terminal emulator for GNU Emacs
 
 License:        GPL-3.0-or-later
@@ -64,6 +64,9 @@ done
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
+* Sat Oct 04 2025 Aleksei Fedotov <aleksei.fedotov@toolsforhumanity.com> 1.0.0-1
+- new package built with tito
+
 * Fri Sep 12 2025 Aleksei Fedotov <aleksei@fedotov.email> 0-0.1
 - Initial package built with tito
 
