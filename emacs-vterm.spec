@@ -28,7 +28,7 @@ capable than the built-in term.el, and provides excellent compatibility
 with command-line tools including ncurses, htop, vim, and others.
 
 %prep
-%autosetup -n emacs-libvterm-%{version}
+%autosetup -n emacs-libvterm-adf8d10212d15f9bd5ca62b96c7b423be02ce3c4
 
 %build
 %cmake -DUSE_SYSTEM_LIBVTERM=yes
