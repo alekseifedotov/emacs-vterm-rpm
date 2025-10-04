@@ -64,7 +64,7 @@ done
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
-* Sat Oct 04 2025 Aleksei Fedotov <aleksei.fedotov@toolsforhumanity.com> 1.0.0-1
+* Sat Oct 04 2025 Aleksei Fedotov <aleksei@fedotov.email> 1.0.0-1
 - new package built with tito
 
 * Fri Sep 12 2025 Aleksei Fedotov <aleksei@fedotov.email> 0-0.1
