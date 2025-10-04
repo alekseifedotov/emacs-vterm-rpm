@@ -47,8 +47,8 @@ mkdir -p %{buildroot}%{_emacs_sitelispdir}/%{pkg}
 # NOTE: Must be executable (755) for Emacs to load it
 install -pm 755 vterm-module.so %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
 
-# Install Elisp source files
-install -pm 644 *.el %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
+# Install Elisp source file
+install -pm 644 vterm.el %{buildroot}%{_emacs_sitelispdir}/%{pkg}/
 
 # Byte-compile all Elisp files
 # Must use absolute paths and handle errors
