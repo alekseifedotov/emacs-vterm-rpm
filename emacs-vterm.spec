@@ -34,7 +34,7 @@ with command-line tools including ncurses, htop, vim, and others.
 %autosetup -n emacs-libvterm-%{commit}
 
 %build
-%cmake -DUSE_SYSTEM_LIBVTERM=yes
+%cmake -DUSE_SYSTEM_LIBVTERM=ON
 %cmake_build
 
 %install
