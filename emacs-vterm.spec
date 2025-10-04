@@ -1,16 +1,13 @@
 %global pkg vterm
-%global commit adf8d10212d15f9bd5ca62b96c7b423be02ce3c4
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global date 20251003
 
 Name:           emacs-%{pkg}
-Version:        0
-Release:        0.1.%{date}git%{shortcommit}%{?dist}
+Version:        0.0.1
+Release:        0%{?dist}
 Summary:        Fully-fledged terminal emulator for GNU Emacs
 
 License:        GPL-3.0-or-later
 URL:            https://github.com/akermu/emacs-libvterm
-Source0:        %{url}/archive/%{commit}/emacs-libvterm-%{commit}.tar.gz
+Source0:        https://github.com/akermu/emacs-libvterm/archive/%{version}/emacs-libvterm-%{version}.tar.gz
 
 BuildRequires:  cmake >= 3.11
 BuildRequires:  gcc
@@ -31,7 +28,7 @@ capable than the built-in term.el, and provides excellent compatibility
 with command-line tools including ncurses, htop, vim, and others.
 
 %prep
-%autosetup -n emacs-libvterm-%{commit}
+%autosetup -n emacs-libvterm-%{version}
 
 %build
 %cmake -DUSE_SYSTEM_LIBVTERM=yes
