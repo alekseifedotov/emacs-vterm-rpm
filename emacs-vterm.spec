@@ -5,7 +5,7 @@
 
 Name:           emacs-%{pkg}
 Version:        0
-Release:        2.%{snapdate}git%{shortcommit}%{?dist}
+Release:        3.%{snapdate}git%{shortcommit}%{?dist}
 Summary:        Fully-fledged terminal emulator for GNU Emacs
 
 License:        GPL-3.0-or-later
@@ -67,6 +67,9 @@ install -pm 644 etc/*.fish %{buildroot}%{_emacs_sitelispdir}/%{pkg}/etc/
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
+* Sat Oct 04 2025 Aleksei Fedotov <aleksei@fedotov.email> 0-3.20250929gitadf8d10
+- 
+
 * Sat Oct 04 2025 Aleksei Fedotov <aleksei@fedotov.email> 0-2.20250929gitadf8d10
 - Fix tito configuration for source tarball packaging (aleksei@fedotov.email)
 - Add BuildRequires improvements (aleksei@fedotov.email)
