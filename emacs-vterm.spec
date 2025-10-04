@@ -5,7 +5,7 @@
 
 Name:           emacs-%{pkg}
 Version:        0
-Release:        1.%{snapdate}git%{shortcommit}%{?dist}
+Release:        2.%{snapdate}git%{shortcommit}%{?dist}
 Summary:        Fully-fledged terminal emulator for GNU Emacs
 
 License:        GPL-3.0-or-later
@@ -15,7 +15,7 @@ Source0:        %{url}/archive/%{commit}/emacs-libvterm-%{commit}.tar.gz
 BuildRequires:  cmake >= 3.11
 BuildRequires:  gcc
 BuildRequires:  make
-BuildRequires:  pkgconfig(vterm) >= 0.1
+BuildRequires:  pkgconfig(vterm) >= 0.2
 BuildRequires:  emacs-nw >= 25.1
 
 # Runtime requirements
@@ -67,6 +67,15 @@ install -pm 644 etc/*.fish %{buildroot}%{_emacs_sitelispdir}/%{pkg}/etc/
 
 #-- CHANGELOG -----------------------------------------------------------------#
 %changelog
+* Sat Oct 04 2025 Aleksei Fedotov <aleksei@fedotov.email> 0-2.20250929gitadf8d10
+- Fix tito configuration for source tarball packaging (aleksei@fedotov.email)
+- Add BuildRequires improvements (aleksei@fedotov.email)
+- Install shell integration scripts (aleksei@fedotov.email)
+- Simplify byte-compilation approach (aleksei@fedotov.email)
+- Fix CMake boolean value (yes -> ON) (aleksei@fedotov.email)
+- Fix wildcard .el installation (aleksei@fedotov.email)
+- Fix version/commit mismatch - use snapshot versioning (aleksei@fedotov.email)
+
 * Sat Oct 04 2025 Aleksei Fedotov <aleksei@fedotov.email> 1.0.0-1
 - new package built with tito
 
